@@ -56,7 +56,7 @@ export default function HomeScreen({ navigation }) {
         {/* Nueva Sección de Encuesta */}
         <View style={styles.surveySection}>
           <Text style={styles.infoText}>
-            Por favor, ayúdanos a mejorar diligenciando la siguiente encuesta.
+            Por favor, ayúdanos a salvar vidas diligenciando la siguiente encuesta.
           </Text>
           <TouchableOpacity
             style={styles.surveyButton}
