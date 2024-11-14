@@ -8,6 +8,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  Linking,
 } from "react-native";
 
 export default function HomeScreen({ navigation }) {
@@ -50,6 +51,19 @@ export default function HomeScreen({ navigation }) {
             source={require("../assets/qr-placeholder.png")}
             style={styles.qrImage}
           />
+        </View>
+
+        {/* Nueva Sección de Encuesta */}
+        <View style={styles.surveySection}>
+          <Text style={styles.infoText}>
+            Por favor, ayúdanos a mejorar diligenciando la siguiente encuesta.
+          </Text>
+          <TouchableOpacity
+            style={styles.surveyButton}
+            onPress={() => Linking.openURL("https://forms.gle/W9UtcrjL7wjDEiJq5")}
+          >
+            <Text style={styles.surveyButtonText}>Diligenciar Encuesta</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Sección de apoyo */}
@@ -146,6 +160,24 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 8,
+  },
+  surveySection: {
+    marginTop: 20,
+    alignItems: "center",
+    paddingVertical: 15,
+    width: "100%",
+  },
+  surveyButton: {
+    backgroundColor: "#FF6347",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    marginVertical: 10,
+  },
+  surveyButtonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
   },
   supportSection: {
     backgroundColor: "#fff",
